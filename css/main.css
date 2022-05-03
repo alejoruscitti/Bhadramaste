@@ -1,0 +1,616 @@
+<<<<<<< HEAD
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Roboto', sans-serif;
+    color: black;
+}
+=======
+@media only screen and (max-width: 480px) {
+  body {
+    text-align: center; }
+    body header {
+      position: absolute; }
+    body .titulo {
+      text-align: center; }
+    body .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      body .menu .logo {
+        margin: auto;
+        align-items: center; }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .container .item {
+      text-align: center;
+      padding: auto;
+      margin: auto; }
+    main .container .containerVelas {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none; }
+      main .container .containerVelas .imgVelas {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      main .container .containerVelas .subtitulosVelas {
+        display: none; }
+      main .container .containerVelas .imgVelas2 {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      main .container .containerVelas .subtitulosDifusor {
+        display: none; } }
+>>>>>>> 4a544cb (sass en todos los html)
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: black; }
+
+<<<<<<< HEAD
+/*fondo del index*/
+body{
+    background-image: linear-gradient( to left, #F9DC88 ,#D1BD8F );
+}
+header{
+=======
+body {
+  background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
+  text-align: center; }
+  body header {
+>>>>>>> 4a544cb (sass en todos los html)
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #D1BD8F;
+<<<<<<< HEAD
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    font-size: 4.5vh;
+    text-transform: uppercase;
+}
+.menu{
+    display: flex;
+    margin: 20px;
+    padding: 2rem;
+}
+.logo{
+    display: inline-block;
+    height: 75px;
+    width: 175px;
+}
+nav ul li a:hover{
+    background-color:#B8994E;
+    transform: scale(1.2);
+}
+.titulo{
+    color: black;
+    text-decoration: none;
+}
+
+
+.containerVelas{
+    display: grid;
+    justify-content: space-between;
+}
+.containerVelas:hover{
+    transform: scale(1.1);
+}
+.item{
+    font-size: 4vh;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7rem;
+    grid-column: 1/ span 4;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.imgVelas{
+    grid-row: 2 / 2;
+    margin: 100px;
+    padding: auto;
+}
+.imgVelas2{
+   grid-row: 2 / 4;  
+   margin: 100px;
+   padding: auto;
+}
+.subtituloVelas{
+    grid-column: 1/ 2;
+    padding: auto;
+    font-size: 3.3vh;
+}
+.subtituloDifusor{
+    grid-column: 4 / 2;
+    padding: auto;
+    font-size: 3.3vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+} 
+.parrafo{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+footer{
+    text-align: center;
+}
+.footer1{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* css velas*/
+
+/* body de velas*/
+.bodyVelas{
+    background-image: linear-gradient( to left, #F9DC88 ,#D1BD8F );
+    font-family:'Roboto', sans-serif;
+}
+.velasTitulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vh;
+}
+
+.menuVelas{
+    background-color: #D1BD8F;
+    text-align: start;
+    font-size: 1vh;
+}
+.headerVelas .menuVelas li a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* estilos de card*/
+
+.estilos-card{
+=======
+    padding: 10px; }
+    body header .titulo {
+      text-align: center;
+      font-size: 2.1vh;
+      text-transform: uppercase;
+      color: black; }
+    body header .menu {
+      display: flex;
+      margin: 20px;
+      padding: 2rem; }
+      body header .menu li {
+        font-size: 40px;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 10px; }
+        body header .menu li a:hover {
+          background-color: #B8994E;
+          transform: scale(1.2); }
+      body header .menu .logo {
+        display: inline-block;
+        height: 75px;
+        width: 175px; }
+  body main {
+    margin: 20px; }
+    body main .container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto; }
+      body main .container .item {
+        font-size: 4vh;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 7rem;
+        grid-column: 1/ span 4; }
+      body main .container .containerVelas {
+        display: grid;
+        justify-content: space-between; }
+        body main .container .containerVelas:hover {
+          transform: scale(1.1); }
+        body main .container .containerVelas .imgVelas {
+          grid-row: 2 / 2;
+          margin: 100px;
+          padding: auto; }
+        body main .container .containerVelas .subtituloVelas {
+          grid-column: 1/ 2;
+          padding: auto;
+          font-size: 3.3vh;
+          text-transform: uppercase;
+          text-align: center;
+          text-decoration: none; }
+        body main .container .containerVelas .imgVelas2 {
+          grid-row: 2 / 4;
+          margin: 100px;
+          padding: auto; }
+        body main .container .containerVelas .subtituloDifusor {
+          grid-column: 4 / 2;
+          padding: auto;
+          font-size: 3.3vh;
+          text-transform: uppercase;
+          text-align: center;
+          text-decoration: none; }
+  body footer {
+    margin: none;
+    text-align: center; }
+
+/*css velas*/
+.bodyVelas {
+  background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
+  font-family: 'Roboto', sans-serif;
+  color: black; }
+  .bodyVelas .headerVelas {
+    background-color: #D1BD8F;
+    position: sticky;
+    top: 0; }
+    .bodyVelas .headerVelas .menuVelas {
+      background-color: #D1BD8F;
+      text-align: start;
+      font-size: 1vh; }
+      .bodyVelas .headerVelas .menuVelas li {
+        font-size: 40px;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 10px; }
+        .bodyVelas .headerVelas .menuVelas li a {
+          color: black;
+          text-decoration: none; }
+      .bodyVelas .headerVelas .menuVelas .logo {
+        display: inline-block;
+        height: 75px;
+        width: 175px; }
+  .bodyVelas .velasTitulo {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5vh; }
+  .bodyVelas .containerFluid .estilosCard {
+>>>>>>> 4a544cb (sass en todos los html)
+    margin: 2rem;
+    padding: 1px;
+    background-color: brown; }
+    .bodyVelas .containerFluid .estilosCard .btnEstilos {
+      background-color: #D1BD8F;
+      box-shadow: 2px 3px black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem; }
+      .bodyVelas .containerFluid .estilosCard .btnEstilos:hover {
+        transform: scale(1.1); }
+  .bodyVelas .containerFluid .estilosP {
+    font-size: 1.8rem; }
+
+/*css productos*/
+.containerProductos .perfuminas {
+  text-align: center;
+  font-size: 5vh;
+  text-transform: uppercase;
+  margin: 50px;
+  padding: 50px; }
+
+.containerProductos .perfuminasTexto, .containerProductos .perfuminasTexto2 {
+  margin: 50px;
+  text-align: center; }
+
+.fotos {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 100px; }
+  .fotos .esencias1 {
+    padding: auto;
+    margin: auto; }
+  .fotos .esencias2 {
+    padding: auto;
+    margin: auto; }
+  .fotos .difusor1 {
+    padding: auto;
+    margin: auto; }
+  .fotos .difusor2 {
+    padding: auto;
+    margin: auto; }
+
+.difusor {
+  text-align: center;
+  font-size: 5vh;
+  text-transform: uppercase; }
+  .difusor .difusorTexto {
+    margin: 50px;
+    text-align: center; }
+  .difusor .difusorTexto2 {
+    text-align: center; }
+
+<<<<<<< HEAD
+/* css productos*/
+
+/*body de productos*/
+.perfuminas{   
+    text-align: center;
+    font-size: 5vh;
+    text-transform: uppercase;
+    margin: 50px;
+    padding: 50px;
+}
+.perfuminasTexto{
+    margin: 50px;
+    text-align: center;
+}
+.perfuminasTexto2{
+    margin: 50px;
+    text-align: center;
+}
+.fotos{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 100px;
+}
+.esencias1{
+    padding: auto;
+    margin: auto;
+}
+.esencias2{
+    padding: auto;
+    margin: auto;
+}
+.difusor1{
+    padding: auto;
+    margin: auto;
+}
+.difusor2{
+    margin: auto;
+    padding: auto;
+}
+.difusor{
+    text-align: center;
+    font-size: 5vh;
+    text-transform: uppercase;
+}
+
+    
+.difusorTexto{
+    margin: 50px;
+    text-align: center;
+}
+.difusorTexto2{
+    text-align: center;
+}
+/*Sobre nosotros*/
+.tituloSobreNosotros{
+    margin: 50px;
+    font-size: 5vh;
+    text-transform: uppercase;
+}
+.containerSobreNosotros{
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+}
+/*contactanos*/
+
+/* body  de contactanos*/
+.bodyContactanos{
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+}
+.contactosParrafos{
+    margin: 20px;
+    padding: 20px;
+}
+
+
+/*formulario*/
+.formulario{
+=======
+/*css sobre nosotros*/
+.containerSobreNosotros {
+  text-align: center;
+  margin: 50px;
+  padding: 50px; }
+  .containerSobreNosotros .tituloSobreNosotros {
+    margin: 50px;
+    font-size: 5vh;
+    text-transform: uppercase; }
+
+/*css contactanos*/
+.bodyContactanos {
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh; }
+  .bodyContactanos .mainContactanos .contactosParrafos {
+    margin: 20px;
+    padding: 20px; }
+  .bodyContactanos .formulario {
+>>>>>>> 4a544cb (sass en todos los html)
+    border: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    text-transform: uppercase;
+<<<<<<< HEAD
+    font-family: 'Roboto', sans-serif ;
+    padding: 50px;
+    margin: 50px;
+}
+@media only screen and (max-width:480px){
+
+    img{
+        width: 100%;
+    }
+    
+    .containerVelas{
+        display: block;
+        justify-content: center;
+        grid-column: none;
+    }
+    .item{
+        grid-column: none;
+        text-align: center;
+    }
+    .imgVelas{
+        display: block;
+        justify-content: start;
+        grid-column: none;
+        margin: 20px;
+        padding: 50px;
+    }
+        
+    
+    .imgVelas2{
+        display: grid;
+        grid-column: none;
+        margin: 20px;
+        padding: 50px;
+    }
+    
+    .subtituloVelas{
+        display: block;
+        margin: 20px;
+        padding: 10px;
+    }
+    .subtituloDifusor{
+        display: block;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    /*Sector velas*/
+
+    .headerVelas{
+        background-color: #D1BD8F ;
+        position: sticky;
+        top: 0;
+        text-align: center;
+    }
+
+    .containervelas{
+        display: inline-block;
+    }
+    /*Sector Productos*/
+    .perfuminas{
+        display: grid;
+        justify-content: center;
+        font-size: 3vh;
+    }
+    .fotos{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    .esencias2{
+        display: none;
+    }
+    .difusor2{
+        display: none;
+    }
+    /*Sector Sobre Nosotros*/
+    .sobre{
+        text-align: center;
+        padding: 10px;
+    }
+    .footer1{
+        position: relative;
+        
+    }
+    /*Sector Contactos*/
+   .mainContactos{
+       font-size: 1.5vh;
+   }
+}   
+
+    
+
+
+=======
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+    margin: 50px; }
+
+.footer1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+@media only screen and (max-width: 480px) {
+  body {
+    text-align: center; }
+    body header {
+      position: static; }
+    body .titulo {
+      text-align: center; }
+    body .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      body .menu .logo {
+        margin: auto;
+        align-items: center; }
+  main .container .item {
+    display: grid;
+    text-align: center;
+    grid-column: none; }
+  main .container .containerVelas {
+    display: grid;
+    justify-content: start; }
+    main .container .containerVelas .imgVelas {
+      display: grid;
+      margin: 20px;
+      height: 300px;
+      width: 300px; }
+    main .container .containerVelas .imgVelas2 {
+      display: none; }
+    main .container .containerVelas .subtituloVelas {
+      display: grid;
+      margin: 20px;
+      grid-column: none;
+      padding: none; }
+    main .container .containerVelas .subtituloDifusor {
+      display: none; }
+  .bodyVelas {
+    text-align: center; }
+    .bodyVelas .headerVelas {
+      position: static;
+      text-align: center; }
+      .bodyVelas .headerVelas .titulo {
+        color: black; }
+  .fotos {
+    display: flex;
+    flex-direction: column;
+    margin: 60px; }
+    .fotos .esencias1 {
+      margin: 10px; }
+    .fotos .esencias2 {
+      margin: 10px; }
+    .fotos .difusor1 {
+      margin: 10px; }
+    .fotos .difusor2 {
+      margin: 30px; }
+  .footer1 {
+    position: relative; }
+  .formulario {
+    font-size: small; } }
+>>>>>>> 4a544cb (sass en todos los html)

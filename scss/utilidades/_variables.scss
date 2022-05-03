@@ -1,0 +1,15 @@
+$color-principal:#F9DC88;
+$color-secundario: #D1BD8F;
+$color-letra:black;
+@mixin size ($margin, $padding) {
+    padding: $padding;
+    margin: $margin;
+}
+@mixin text{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+$cardbg:(
+    "primario": brown
+)

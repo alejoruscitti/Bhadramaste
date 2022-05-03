@@ -1,0 +1,388 @@
+@import "utilidades/variables";
+@import "utilidades/mediasquerys";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+body {
+    background-image: linear-gradient(to left, $color-principal, $color-secundario);
+    text-align: center;
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color:$color-secundario;
+        padding: 10px;
+
+        .titulo {
+            text-align: center;
+            font-size: 2.1vh;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        .menu {
+            display: flex;
+            margin: 20px;
+            padding: 2rem;
+
+            li {
+                font-size: 40px;
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 10px;
+                padding: 10px;
+
+                a {
+                    &:hover {
+                        background-color: #B8994E;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            .logo {
+                display: inline-block;
+                height: 75px;
+                width: 175px;
+            }
+        }
+    }
+
+    main {
+        
+        margin: 20px;
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+
+            .item {
+                font-size: 4vh;
+                @include text;
+                padding: 7rem;
+                grid-column: 1/ span 4;
+            }
+
+            .containerVelas {
+                display: grid;
+                justify-content: space-between;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                .imgVelas {
+                    grid-row: 2 / 2;
+                    margin: 100px;
+                    padding: auto;
+                }
+
+                .subtituloVelas {
+                    grid-column: 1/ 2;
+                    padding: auto;
+                    font-size: 3.3vh;
+                    @include text;
+                    text-decoration: none;
+                }
+
+                .imgVelas2 {
+                    grid-row: 2 / 4;
+                    margin: 100px;
+                    padding: auto;
+                }
+
+                .subtituloDifusor {
+                    grid-column: 4 / 2;
+                    padding: auto;
+                    font-size: 3.3vh;
+                    @include text;
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+    footer{
+        margin: none;
+        text-align: center;
+    }
+}
+/*css velas*/
+//css velas
+.bodyVelas {
+    background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
+    font-family: 'Roboto', sans-serif;
+    color: $color-letra;
+
+    .headerVelas {
+        background-color: #D1BD8F;
+        position: sticky;
+        top: 0;
+
+        .menuVelas {
+            background-color: #D1BD8F;
+            text-align: start;
+            font-size: 1vh;
+
+            li {
+                font-size: 40px;
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 10px;
+                padding: 10px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+
+            .logo {
+                display: inline-block;
+                height: 75px;
+                width: 175px;
+            }
+        }
+    }
+
+    .velasTitulo {
+        @include text;
+        font-size: 5vh;
+    }
+
+    .containerFluid {
+        .estilosCard {
+            margin: 2rem;
+            padding: 1px;
+            background-color: map-get($map: $cardbg, $key: "primario");
+
+            .btnEstilos {
+                background-color: $color-secundario;
+                box-shadow: 2px 3px black;
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+        .estilosP {
+            font-size: 1.8rem;
+        }
+    }
+}
+/*css productos*/
+//css productos
+.containerProductos {
+    .perfuminas {
+        text-align: center;
+        font-size: 5vh;
+        text-transform: uppercase;
+        margin: 50px;
+        padding: 50px;
+    }
+
+    .perfuminasTexto {
+        margin: 50px;
+        text-align: center;
+    }
+
+    .perfuminasTexto2 {
+        @extend .perfuminasTexto;
+    }
+}
+
+.fotos {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 100px;
+
+    .esencias1 {
+        @include size (auto, auto)
+    }
+
+    .esencias2 {
+        @include size (auto, auto)
+    }
+
+    .difusor1 {
+        @include size (auto, auto)
+    }
+
+    .difusor2 {
+        @include size (auto, auto)
+    }
+}
+
+.difusor {
+    text-align: center;
+    font-size: 5vh;
+    text-transform: uppercase;
+
+    .difusorTexto {
+        margin: 50px;
+        text-align: center;
+    }
+
+    .difusorTexto2 {
+        text-align: center;
+    }
+}
+/*css sobre nosotros*/
+//css sobre nosotros
+.containerSobreNosotros {
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+
+    .tituloSobreNosotros {
+        margin: 50px;
+        font-size: 5vh;
+        text-transform: uppercase;
+    }
+}
+/*css contactanos*/
+//css contactanos
+.bodyContactanos {
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+
+    .mainContactanos {
+        .contactosParrafos {
+            margin: 20px;
+            padding: 20px;
+        }
+    }
+
+    .formulario {
+        border: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        padding: 50px;
+        margin: 50px;
+    }
+
+}
+
+.footer1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width:480px){
+    body{
+        text-align: center;
+        header{
+            position: static;
+        }
+        .titulo{
+            text-align: center;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .logo{
+                margin:auto;
+                align-items: center;
+            }
+        }
+    }
+    main{
+        .container{
+            .item{display: grid;
+                text-align: center;
+                grid-column: none;
+            }
+            .containerVelas{
+                display: grid;
+                justify-content: start;
+            
+                .imgVelas{
+                    display: grid;
+                    margin: 20px;
+                    height: 300px;
+                    width: 300px;
+                }
+                .imgVelas2{
+                    display: none;
+                }
+                .subtituloVelas{
+                    display: grid;
+                    margin: 20px;
+                    grid-column: none;
+                    padding: none;
+                }
+                .subtituloDifusor{
+                    display: none;
+                }
+            }
+        }
+    }
+        
+    //css velas
+    .bodyVelas{
+        text-align: center;
+        .headerVelas{
+            position: static;
+            text-align: center;
+            .titulo{
+                color: black;
+            }
+        }
+    }
+    //css productos
+    .fotos{
+        display: flex;
+        flex-direction: column;
+       margin: 60px;
+       .esencias1{
+           margin: 10px;
+        }
+        .esencias2{
+            margin: 10px;
+        }
+        .difusor1{
+            margin: 10px;
+        }
+        .difusor2{
+            margin: 30px;
+        }
+    }
+    //css sobre nosotros
+    
+    .footer1{
+        position: relative;
+    }
+    
+    //css contactanos
+    .formulario{
+        font-size: small;
+    }
+}
+
