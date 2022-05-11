@@ -43,46 +43,45 @@ body {
         display: inline-block;
         height: 75px;
         width: 175px; }
-  body main {
-    margin: 20px; }
-    body main .grid {
+  body main .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    text-decoration: none; }
+    body main .grid .item {
+      font-size: 4vh;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 7rem;
+      grid-column: 1/ span 4; }
+    body main .grid .containerVelas {
       display: grid;
-      grid-template-columns: auto auto auto;
-      grid-template-rows: auto auto auto;
-      text-decoration: none; }
-      body main .grid .item {
-        font-size: 4vh;
+      justify-content: space-between;
+      list-style: none;
+      margin: 10px; }
+      body main .grid .containerVelas:hover {
+        transform: scale(1.1); }
+      body main .grid .containerVelas .imgVelas {
+        grid-row: 2 / 2;
+        margin: 100px;
+        padding: auto; }
+      body main .grid .containerVelas .subtituloVelas {
+        grid-column: 1/ 2;
+        padding: auto;
+        font-size: 3.3vh;
         text-transform: uppercase;
         text-align: center;
-        padding: 7rem;
-        grid-column: 1/ span 4; }
-      body main .grid .containerVelas {
-        display: grid;
-        justify-content: space-between;
         list-style: none; }
-        body main .grid .containerVelas:hover {
-          transform: scale(1.1); }
-        body main .grid .containerVelas .imgVelas {
-          grid-row: 2 / 2;
-          margin: 100px;
-          padding: auto; }
-        body main .grid .containerVelas .subtituloVelas {
-          grid-column: 1/ 2;
-          padding: auto;
-          font-size: 3.3vh;
-          text-transform: uppercase;
-          text-align: center;
-          list-style: none; }
-        body main .grid .containerVelas .imgVelas2 {
-          grid-row: 2 / 4;
-          margin: 100px;
-          padding: auto; }
-        body main .grid .containerVelas .subtituloDifusor {
-          grid-column: 4 / 2;
-          padding: auto;
-          font-size: 3.3vh;
-          text-transform: uppercase;
-          text-align: center; }
+      body main .grid .containerVelas .imgVelas2 {
+        grid-row: 2 / 4;
+        margin: 100px;
+        padding: auto; }
+      body main .grid .containerVelas .subtituloDifusor {
+        grid-column: 4 / 2;
+        padding: auto;
+        font-size: 3.3vh;
+        text-transform: uppercase;
+        text-align: center; }
   body footer {
     margin: none;
     text-align: center; }
@@ -182,7 +181,7 @@ body {
   margin: 50px;
   padding: 50px; }
   .containerSobreNosotros .tituloSobreNosotros {
-    margin: 50px;
+    margin: 10px;
     font-size: 5vh;
     text-transform: uppercase; }
   .containerSobreNosotros .textoSobreNosotros {
@@ -230,6 +229,10 @@ body {
 img {
   width: 100%;
   height: auto; }
+
+p {
+  font-size: 20px;
+  margin: 20px; }
 
 @media only screen and (max-width: 480px) {
   body {
