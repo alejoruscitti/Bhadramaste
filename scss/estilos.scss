@@ -1,6 +1,4 @@
 @import "utilidades/variables";
-@import "utilidades/mediasquerys";
-
 * {
     margin: 0;
     padding: 0;
@@ -13,18 +11,18 @@
 body {
     background-image: linear-gradient(to left, $color-principal, $color-secundario);
     text-align: center;
+    /*inicio de header*/
     header {
-        position: sticky;
-        top: 0;
         z-index: 2;
         background-color:$color-secundario;
-        padding: 10px;
+        
 
         .titulo {
             text-align: center;
             font-size: 2.1vh;
             text-transform: uppercase;
             color: black;
+            text-decoration: none;
         }
 
         .menu {
@@ -37,6 +35,7 @@ body {
                 display: flex;
                 text-align: center;
                 text-transform: uppercase;
+                text-decoration: none;
                 margin: 10px;
                 padding: 10px;
 
@@ -55,28 +54,29 @@ body {
             }
         }
     }
+    /*final de header*/
+    /*inicio de main*/
 
     main {
         
         margin: 20px;
 
-        .container {
+        .grid {
             display: grid;
             grid-template-columns: auto auto auto;
             grid-template-rows: auto auto auto;
             text-decoration: none;
-
             .item {
                 font-size: 4vh;
                 @include text;
                 padding: 7rem;
                 grid-column: 1/ span 4;
             }
-
             .containerVelas {
                 display: grid;
                 justify-content: space-between;
-
+                list-style: none;
+                
                 &:hover {
                     transform: scale(1.1);
                 }
@@ -86,15 +86,14 @@ body {
                     margin: 100px;
                     padding: auto;
                 }
-
-                .subtituloVelas {
+                .subtituloVelas{
                     grid-column: 1/ 2;
                     padding: auto;
                     font-size: 3.3vh;
                     @include text;
-                    text-decoration: none;
+                    list-style: none;
                 }
-
+                
                 .imgVelas2 {
                     grid-row: 2 / 4;
                     margin: 100px;
@@ -106,16 +105,20 @@ body {
                     padding: auto;
                     font-size: 3.3vh;
                     @include text;
-                    text-decoration: none;
-
+                    
                 }
             }
+           
         }
     }
+   
+    /*final de main*/
+    /*inicio de footer */
     footer{
         margin: none;
         text-align: center;
     }
+    /*final de footer*/
 }
 /*css velas*/
 //css velas
@@ -123,19 +126,17 @@ body {
     background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
     font-family: 'Roboto', sans-serif;
     color: $color-letra;
-
+    /*inicio de header*/
     .headerVelas {
         background-color: #D1BD8F;
-        position: sticky;
-        top: 0;
-
         .menuVelas {
             background-color: #D1BD8F;
             text-align: start;
-            font-size: 1vh;
-
+            margin: 10px;
+            padding: 2rem;
+            
             li {
-                font-size: 40px;
+                font-size: 2.9vh;
                 display: inline-block;
                 text-align: center;
                 text-transform: uppercase;
@@ -148,43 +149,49 @@ body {
                 }
             }
 
-            .logo {
+            .logoVelas {
                 display: inline-block;
                 height: 75px;
                 width: 175px;
             }
         }
     }
+    /*final de header*/
 
     .velasTitulo {
         @include text;
         font-size: 5vh;
     }
-
-    .containerFluid {
-        .estilosCard {
-            margin: 2rem;
-            padding: 1px;
-            background-color: map-get($map: $cardbg, $key: "primario");
-
-            .btnEstilos {
-                background-color: $color-secundario;
-                box-shadow: 2px 3px black;
-                font-size: 1.2rem;
-                font-weight: bold;
-                letter-spacing: 0.1rem;
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
-
-        }
-
-        .estilosP {
-            font-size: 1.8rem;
+    .estilosCard{
+        margin: 2rem;
+        background-color: brown;
+    }
+    .btnEstilos {
+        background-color: $color-secundario;
+        box-shadow: 2px 3px black;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+       
+        &:hover {
+            transform: scale(1.1);
         }
     }
+    .estilosP {
+        font-size: 1.8rem;
+    }
+    .containerFluid{
+        .row{
+            .card{
+                .card-body{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    
 }
 /*css productos*/
 //css productos
@@ -255,6 +262,16 @@ body {
         font-size: 5vh;
         text-transform: uppercase;
     }
+    .textoSobreNosotros{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        align-items: center;
+        font-size: 20px;
+        margin: 3rem;
+        padding: 3rem;
+    }
 }
 /*css contactanos*/
 //css contactanos
@@ -262,13 +279,21 @@ body {
     position: relative;
     padding-bottom: 3em;
     min-height: 100vh;
-
+    .headerContactos{
+        margin:0;
+        .menu{
+            margin: 10px;
+            padding: 2rem;
+        }
+    }
+    /*inicio de main */
     .mainContactanos {
         .contactosParrafos {
             margin: 20px;
             padding: 20px;
         }
     }
+    /*final de main*/
 
     .formulario {
         border: 10px;
@@ -282,23 +307,25 @@ body {
     }
 
 }
-
+/*inicio de footer*/
 .footer1 {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+/*final de footer*/
 
 img {
     width: 100%;
     height: auto;
 }
 
+
 @media only screen and (max-width:480px){
     body{
         text-align: center;
         header{
-            position: static;
+            text-align: center;
         }
         .titulo{
             text-align: center;
@@ -312,10 +339,15 @@ img {
                 margin:auto;
                 align-items: center;
             }
+            li{
+                display: inline-block;
+                justify-content: center;
+            }
         }
     }
     main{
-        .container{
+        align-items: center;
+        .grid{
             .item{display: grid;
                 text-align: center;
                 grid-column: none;
@@ -345,18 +377,37 @@ img {
             }
         }
     }
-        
     //css velas
     .bodyVelas{
         text-align: center;
         .headerVelas{
-            position: static;
             text-align: center;
             .titulo{
                 color: black;
             }
+            .logoVelas{
+                align-items: center; 
+                margin: auto;
+            }
+            .home{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .liVelas{
+              margin: 50px;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center; 
+              align-items: center;
+              text-align: center;
+            }
         }
-    }
+    } 
+    
+    
     //css productos
     .fotos{
         display: flex;
@@ -376,6 +427,17 @@ img {
         }
     }
     //css sobre nosotros
+    .containerSobreNosotros{
+        
+        .textoSobreNosotros{
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            text-align: center;
+            align-items: center;;
+        }
+    }
+    
     
     .footer1{
         position: relative;
@@ -387,3 +449,94 @@ img {
     }
 }
 
+@media only screen and (max-width:768px){
+    body{
+        header{
+            .menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .logo{
+                    margin: auto;
+                    width: auto;
+                    height: auto;
+                }
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+        .main{
+            display: grid;
+            grid-template-columns:1fr 1fr ;
+            .container{
+                display: grid;
+               
+                .item{
+                    
+                    text-align: center;
+                }
+            }
+        }
+    }
+    //css velas
+    .bodyVelas{
+        text-align: center;
+        .headerVelas{
+            text-align: center;
+            .menuVelas{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .titulo{
+                color: black;
+            }
+            .logoVelas{
+                align-items: center; 
+                margin: auto;
+            }
+            .home{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .liVelas{
+              margin: 50px;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center; 
+              align-items: center;
+              text-align: center;
+            }
+        }
+    } 
+
+    //css productos
+    .fotos{
+        display: flex;
+        flex-direction: column;
+        margin: 60px;
+       .esencias1{
+           margin: 10px;
+        }
+        .esencias2{
+            margin: 10px;
+        }
+        .difusor1{
+            margin: 10px;
+        }
+        .difusor2{
+            margin: 30px;
+        }
+    }
+    // css productos
+    .footer1{
+        position: relative;
+    }
+   
+}
