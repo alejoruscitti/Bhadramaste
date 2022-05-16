@@ -4,6 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   color: black; }
 
 body {
@@ -82,6 +83,8 @@ body {
         font-size: 3.3vh;
         text-transform: uppercase;
         text-align: center; }
+  body span {
+    display: block; }
   body footer {
     margin: none;
     text-align: center; }
@@ -195,21 +198,22 @@ body {
     padding: 3rem; }
 
 /*css contactanos*/
-.bodyContactanos {
+.bodyContacto {
   position: relative;
   padding-bottom: 3em;
   min-height: 100vh;
   /*inicio de main */
   /*final de main*/ }
-  .bodyContactanos .headerContactos {
+  .bodyContacto .headerContacto {
     margin: 0; }
-    .bodyContactanos .headerContactos .menu {
+    .bodyContacto .headerContacto .menu {
       margin: 10px;
       padding: 2rem; }
-  .bodyContactanos .mainContactanos .contactosParrafos {
+  .bodyContacto .mainContactanos .contactosParrafos {
     margin: 20px;
-    padding: 20px; }
-  .bodyContactanos .formulario {
+    padding: 20px;
+    font-size: 20px; }
+  .bodyContacto .formulario {
     border: 10px;
     display: flex;
     flex-direction: row;
@@ -230,15 +234,14 @@ img {
   width: 100%;
   height: auto; }
 
-p {
-  font-size: 20px;
-  margin: 20px; }
+pre {
+  text-align: center; }
 
 @media only screen and (max-width: 480px) {
   body {
-    text-align: center; }
+    align-items: center; }
     body header {
-      text-align: center; }
+      align-items: center; }
     body .titulo {
       text-align: center; }
     body .menu {
@@ -251,15 +254,17 @@ p {
       body .menu li {
         display: inline-block;
         justify-content: center; }
-  main {
+  main .grid {
     align-items: center; }
     main .grid .item {
       display: grid;
       text-align: center;
-      grid-column: none; }
+      grid-column: none;
+      align-items: center; }
     main .grid .containerVelas {
       display: grid;
-      justify-content: start; }
+      justify-content: center;
+      align-items: center; }
       main .grid .containerVelas .imgVelas {
         display: grid;
         margin: 20px;
@@ -319,15 +324,15 @@ p {
   .formulario {
     font-size: small; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 875px) {
   body header .menu {
     display: flex;
     flex-direction: column;
     justify-content: center; }
     body header .menu .logo {
       margin: auto;
-      width: auto;
-      height: auto; }
+      height: auto;
+      width: auto; }
     body header .menu li {
       display: flex;
       flex-direction: column;
@@ -368,14 +373,23 @@ p {
   .fotos {
     display: flex;
     flex-direction: column;
-    margin: 60px; }
+    margin: 60px;
+    align-items: center; }
     .fotos .esencias1 {
-      margin: 10px; }
+      margin: 80px;
+      height: 300px;
+      width: 300px; }
     .fotos .esencias2 {
-      margin: 10px; }
+      margin: 80px;
+      height: 300px;
+      width: 300px; }
     .fotos .difusor1 {
-      margin: 10px; }
+      margin: 120px;
+      height: 300px;
+      width: 300px; }
     .fotos .difusor2 {
-      margin: 30px; }
+      margin: 10px;
+      height: 300px;
+      width: 300px; }
   .footer1 {
     position: relative; } }

@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     color: black;
 }
 
@@ -109,7 +110,9 @@ body {
            
         }
     }
-   
+    span{
+        display: block;
+    }
     /*final de main*/
     /*inicio de footer */
     footer{
@@ -273,11 +276,11 @@ body {
 }
 /*css contactanos*/
 //css contactanos
-.bodyContactanos {
+.bodyContacto{
     position: relative;
     padding-bottom: 3em;
     min-height: 100vh;
-    .headerContactos{
+    .headerContacto{
         margin:0;
         .menu{
             margin: 10px;
@@ -286,9 +289,10 @@ body {
     }
     /*inicio de main */
     .mainContactanos {
-        .contactosParrafos {
+        .contactosParrafos{
             margin: 20px;
             padding: 20px;
+            font-size: 20px;
         }
     }
     /*final de main*/
@@ -317,17 +321,16 @@ img {
     width: 100%;
     height: auto;
 }
-p{
-    font-size: 20px;
-    margin: 20px;
+pre{
+    text-align: center;
 }
 
 
 @media only screen and (max-width:480px){
     body{
-        text-align: center;
+        align-items: center;
         header{
-            text-align: center;
+            align-items: center;
         }
         .titulo{
             text-align: center;
@@ -348,15 +351,17 @@ p{
         }
     }
     main{
-        align-items: center;
         .grid{
+            align-items: center;
             .item{display: grid;
                 text-align: center;
                 grid-column: none;
+                align-items: center;
             }
             .containerVelas{
                 display: grid;
-                justify-content: start;
+                justify-content: center;
+                align-items: center;
             
                 .imgVelas{
                     display: grid;
@@ -379,6 +384,7 @@ p{
             }
         }
     }
+
     //css velas
     .bodyVelas{
         text-align: center;
@@ -408,7 +414,7 @@ p{
             }
         }
     } 
-    
+
     
     //css productos
     .fotos{
@@ -451,7 +457,7 @@ p{
     }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:875px){
     body{
         header{
             .menu{
@@ -460,8 +466,8 @@ p{
                 justify-content: center;
                 .logo{
                     margin: auto;
-                    width: auto;
                     height: auto;
+                    width: auto;
                 }
                 li{
                     display: flex;
@@ -472,7 +478,7 @@ p{
         }
         .main{
             display: grid;
-            grid-template-columns:1fr 1fr ;
+            grid-template-columns:1fr 1fr;
             .container{
                 display: grid;
                
@@ -523,22 +529,33 @@ p{
         display: flex;
         flex-direction: column;
         margin: 60px;
+        align-items: center;
        .esencias1{
-           margin: 10px;
+           margin: 80px;
+           height: 300px;
+           width: 300px;
         }
         .esencias2{
-            margin: 10px;
+            margin: 80px;
+            height: 300px;
+           width: 300px;
         }
         .difusor1{
-            margin: 10px;
+            margin: 120px;
+            height: 300px;
+           width: 300px;
         }
         .difusor2{
-            margin: 30px;
+            margin: 10px;
+            height: 300px;
+           width: 300px;
         }
     }
     // css productos
+
     .footer1{
         position: relative;
     }
+
    
 }
