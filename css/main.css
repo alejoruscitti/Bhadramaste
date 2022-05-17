@@ -57,14 +57,14 @@ body {
       grid-column: 1/ span 4; }
     body main .grid .containerVelas {
       display: grid;
-      justify-content: space-between;
+      justify-content: center;
       list-style: none;
       margin: 10px; }
       body main .grid .containerVelas:hover {
         transform: scale(1.1); }
       body main .grid .containerVelas .imgVelas {
         grid-row: 2 / 2;
-        margin: 100px;
+        margin: 200px;
         padding: auto; }
       body main .grid .containerVelas .subtituloVelas {
         grid-column: 1/ 2;
@@ -75,7 +75,7 @@ body {
         list-style: none; }
       body main .grid .containerVelas .imgVelas2 {
         grid-row: 2 / 4;
-        margin: 100px;
+        margin: 200px;
         padding: auto; }
       body main .grid .containerVelas .subtituloDifusor {
         grid-column: 4 / 2;
@@ -83,7 +83,9 @@ body {
         font-size: 3.3vh;
         text-transform: uppercase;
         text-align: center; }
-  body span {
+  body main .parrafoIndex {
+    margin: 40px; }
+  body main span {
     display: block; }
   body footer {
     margin: none;
@@ -171,7 +173,8 @@ body {
 .difusor {
   text-align: center;
   font-size: 5vh;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 70px; }
   .difusor .difusorTexto {
     margin: 50px;
     text-align: center; }
@@ -184,18 +187,11 @@ body {
   margin: 50px;
   padding: 50px; }
   .containerSobreNosotros .tituloSobreNosotros {
-    margin: 10px;
+    margin: 40px;
     font-size: 5vh;
     text-transform: uppercase; }
   .containerSobreNosotros .textoSobreNosotros {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-    font-size: 20px;
-    margin: 3rem;
-    padding: 3rem; }
+    margin: auto; }
 
 /*css contactanos*/
 .bodyContacto {
@@ -255,6 +251,8 @@ pre {
         display: inline-block;
         justify-content: center; }
   main .grid {
+    display: inline-block;
+    justify-content: center;
     align-items: center; }
     main .grid .item {
       display: grid;
@@ -337,13 +335,45 @@ pre {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-  body .main {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
-    body .main .container {
-      display: grid; }
-      body .main .container .item {
-        text-align: center; }
+  body main .grid {
+    display: inline-block;
+    justify-content: center;
+    align-items: center; }
+    body main .grid .item {
+      display: grid;
+      text-align: center;
+      grid-column: none;
+      align-items: center; }
+    body main .grid .containerVelas {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      body main .grid .containerVelas .imgVelas {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        height: 400px;
+        width: 400px;
+        padding: auto; }
+      body main .grid .containerVelas .imgVelas2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto; }
+      body main .grid .containerVelas .subtituloVelas {
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px;
+        grid-column: none;
+        padding: none; }
+      body main .grid .containerVelas .subtituloDifusor {
+        display: grid;
+        justify-content: center;
+        margin: auto;
+        grid-column: none;
+        padding: none; }
   .bodyVelas {
     text-align: center; }
     .bodyVelas .headerVelas {
@@ -370,6 +400,9 @@ pre {
         justify-content: center;
         align-items: center;
         text-align: center; }
+  img {
+    width: 150px;
+    height: auto; }
   .fotos {
     display: flex;
     flex-direction: column;
