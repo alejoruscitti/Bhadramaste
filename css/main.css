@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: black; }
 
@@ -16,6 +16,17 @@ body {
   /*final de main*/
   /*inicio de footer */
   /*final de footer*/ }
+  body .layout {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto; }
+    body .layout header {
+      grid-area: header; }
+    body .layout main {
+      grid-area: main; }
+    body .layout footer {
+      grid-area: footer; }
   body header {
     z-index: 2;
     background-color: #D1BD8F; }
@@ -38,51 +49,30 @@ body {
         margin: 10px;
         padding: 10px; }
         body header .menu li a:hover {
-          background-color: #B8994E;
+          background-color: #b8994e;
           transform: scale(1.2); }
       body header .menu .logo {
         display: inline-block;
         height: 75px;
         width: 175px; }
-  body main .grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    text-decoration: none; }
-    body main .grid .item {
-      font-size: 4vh;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 7rem;
-      grid-column: 1/ span 4; }
-    body main .grid .containerVelas {
-      display: grid;
-      justify-content: center;
-      list-style: none;
-      margin: 10px; }
-      body main .grid .containerVelas:hover {
-        transform: scale(1.1); }
-      body main .grid .containerVelas .imgVelas {
-        grid-row: 2 / 2;
-        margin: 200px;
-        padding: auto; }
-      body main .grid .containerVelas .subtituloVelas {
-        grid-column: 1/ 2;
-        padding: auto;
-        font-size: 3.3vh;
-        text-transform: uppercase;
-        text-align: center;
-        list-style: none; }
-      body main .grid .containerVelas .imgVelas2 {
-        grid-row: 2 / 4;
-        margin: 200px;
-        padding: auto; }
-      body main .grid .containerVelas .subtituloDifusor {
-        grid-column: 4 / 2;
-        padding: auto;
-        font-size: 3.3vh;
-        text-transform: uppercase;
-        text-align: center; }
+  body main h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 100px; }
+  body main .containerVelas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; }
+    body main .containerVelas .containerVelas1,
+    body main .containerVelas .containerVelas2 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      body main .containerVelas .containerVelas1:hover,
+      body main .containerVelas .containerVelas2:hover {
+        transform: scale(1.2); }
   body main .parrafoIndex {
     margin: 40px; }
   body main span {
@@ -93,15 +83,15 @@ body {
 
 /*css velas*/
 .bodyVelas {
-  background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
-  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to left, #f9dc88, #d1bd8f);
+  font-family: "Roboto", sans-serif;
   color: black;
   /*inicio de header*/
   /*final de header*/ }
   .bodyVelas .headerVelas {
-    background-color: #D1BD8F; }
+    background-color: #d1bd8f; }
     .bodyVelas .headerVelas .menuVelas {
-      background-color: #D1BD8F;
+      background-color: #d1bd8f;
       text-align: start;
       margin: 10px;
       padding: 2rem; }
@@ -215,7 +205,7 @@ body {
     flex-direction: row;
     justify-content: end;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     padding: 50px;
     margin: 50px; }
 
@@ -233,50 +223,86 @@ img {
 pre {
   text-align: center; }
 
-@media only screen and (max-width: 480px) {
-  body {
-    align-items: center; }
-    body header {
-      align-items: center; }
-    body .titulo {
-      text-align: center; }
-    body .menu {
+@media only screen and (max-width: 875px) {
+  body header .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body header .menu .logo {
+      margin: auto;
+      height: auto;
+      width: auto; }
+    body header .menu li {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      body .menu .logo {
+  body main .containerVelas {
+    flex-direction: column; }
+  .bodyVelas {
+    text-align: center; }
+    .bodyVelas .headerVelas {
+      text-align: center; }
+      .bodyVelas .headerVelas .menuVelas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      .bodyVelas .headerVelas .titulo {
+        color: black; }
+      .bodyVelas .headerVelas .logoVelas {
+        align-items: center;
+        margin: auto; }
+      .bodyVelas .headerVelas .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .bodyVelas .headerVelas .liVelas {
+        margin: 50px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+  .fotos {
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    align-items: center; }
+    .fotos .esencias1 {
+      margin: 80px;
+      height: 300px;
+      width: 300px; }
+    .fotos .esencias2 {
+      margin: 80px;
+      height: 300px;
+      width: 300px; }
+    .fotos .difusor1 {
+      margin: 120px;
+      height: 300px;
+      width: 300px; }
+    .fotos .difusor2 {
+      margin: 10px;
+      height: 300px;
+      width: 300px; }
+  .footer1 {
+    position: relative; } }
+
+@media only screen and (max-width: 480px) {
+  body header {
+    text-align: center; }
+    body header .titulo {
+      text-align: center; }
+    body header .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      body header .menu .log {
         margin: auto;
         align-items: center; }
-      body .menu li {
+      body header .menu li {
         display: inline-block;
         justify-content: center; }
-  main .grid {
-    display: inline-block;
-    justify-content: center;
-    align-items: center; }
-    main .grid .item {
-      display: grid;
-      text-align: center;
-      grid-column: none;
-      align-items: center; }
-    main .grid .containerVelas {
-      display: grid;
-      justify-content: center;
-      align-items: center; }
-      main .grid .containerVelas .imgVelas {
-        display: grid;
-        margin: 20px;
-        height: 300px;
-        width: 300px; }
-      main .grid .containerVelas .imgVelas2 {
-        display: none; }
-      main .grid .containerVelas .subtituloVelas {
-        display: grid;
-        margin: 20px;
-        grid-column: none;
-        padding: none; }
-      main .grid .containerVelas .subtituloDifusor {
-        display: none; }
   .bodyVelas {
     text-align: center; }
     .bodyVelas .headerVelas {
@@ -321,108 +347,3 @@ pre {
     position: relative; }
   .formulario {
     font-size: small; } }
-
-@media only screen and (max-width: 875px) {
-  body header .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    body header .menu .logo {
-      margin: auto;
-      height: auto;
-      width: auto; }
-    body header .menu li {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-  body main .grid {
-    display: inline-block;
-    justify-content: center;
-    align-items: center; }
-    body main .grid .item {
-      display: grid;
-      text-align: center;
-      grid-column: none;
-      align-items: center; }
-    body main .grid .containerVelas {
-      display: grid;
-      justify-content: center;
-      align-items: center; }
-      body main .grid .containerVelas .imgVelas {
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        height: 400px;
-        width: 400px;
-        padding: auto; }
-      body main .grid .containerVelas .imgVelas2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: auto; }
-      body main .grid .containerVelas .subtituloVelas {
-        display: grid;
-        justify-content: space-between;
-        align-items: center;
-        margin: 40px;
-        grid-column: none;
-        padding: none; }
-      body main .grid .containerVelas .subtituloDifusor {
-        display: grid;
-        justify-content: center;
-        margin: auto;
-        grid-column: none;
-        padding: none; }
-  .bodyVelas {
-    text-align: center; }
-    .bodyVelas .headerVelas {
-      text-align: center; }
-      .bodyVelas .headerVelas .menuVelas {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; }
-      .bodyVelas .headerVelas .titulo {
-        color: black; }
-      .bodyVelas .headerVelas .logoVelas {
-        align-items: center;
-        margin: auto; }
-      .bodyVelas .headerVelas .home {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-      .bodyVelas .headerVelas .liVelas {
-        margin: 50px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center; }
-  img {
-    width: 150px;
-    height: auto; }
-  .fotos {
-    display: flex;
-    flex-direction: column;
-    margin: 60px;
-    align-items: center; }
-    .fotos .esencias1 {
-      margin: 80px;
-      height: 300px;
-      width: 300px; }
-    .fotos .esencias2 {
-      margin: 80px;
-      height: 300px;
-      width: 300px; }
-    .fotos .difusor1 {
-      margin: 120px;
-      height: 300px;
-      width: 300px; }
-    .fotos .difusor2 {
-      margin: 10px;
-      height: 300px;
-      width: 300px; }
-  .footer1 {
-    position: relative; } }

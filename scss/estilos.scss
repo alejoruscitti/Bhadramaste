@@ -1,599 +1,503 @@
 @import "utilidades/variables";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: black;
 }
 
 body {
-    background-image: linear-gradient(to left, $color-principal, $color-secundario);
-    text-align: center;
-    /*inicio de header*/
+  background-image: linear-gradient(to left, $color-principal, $color-secundario);
+  text-align: center;
+
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
     header {
-        z-index: 2;
-        background-color:$color-secundario;
-        .titulo {
-            text-align: center;
-            font-size: 2.1vh;
-            text-transform: uppercase;
-            color: black;
-            text-decoration: none;
-        }
-
-        .menu {
-            display: flex;
-            margin: 20px;
-            padding: 2rem;
-
-            li {
-                font-size: 2.9vh;
-                display: flex;
-                text-align: center;
-                text-transform: uppercase;
-                text-decoration: none;
-                margin: 10px;
-                padding: 10px;
-
-                a {
-                    &:hover {
-                        background-color: #B8994E;
-                        transform: scale(1.2);
-                    }
-                }
-            }
-
-            .logo {
-                display: inline-block;
-                height: 75px;
-                width: 175px;
-            }
-        }
+      grid-area: header;
     }
-    /*final de header*/
-    /*inicio de main*/
 
     main {
-        .grid {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto;
-            text-decoration: none;
-            .item {
-                font-size: 4vh;
-                @include text;
-                padding: 7rem;
-                grid-column: 1/ span 4;
-            }
-            .containerVelas {
-                display: grid;
-                justify-content: center;
-                list-style: none;
-                margin:10px;
-                
-                &:hover {
-                    transform: scale(1.1);
-                }
-
-                .imgVelas {
-                    grid-row: 2 / 2;
-                    margin: 200px;
-                    padding: auto;
-                }
-                .subtituloVelas{
-                    grid-column: 1/ 2;
-                    padding: auto;
-                    font-size: 3.3vh;
-                    @include text;
-                    list-style: none;
-                }
-                
-                .imgVelas2 {
-                    grid-row: 2 / 4;
-                    margin: 200px;
-                    padding: auto;
-                }
-
-                .subtituloDifusor {
-                    grid-column: 4 / 2;
-                    padding: auto;
-                    font-size: 3.3vh;
-                    @include text;
-                    
-                }
-            }
-           
-        }.parrafoIndex{
-            margin: 40px;
-        }
-        span{
-            display: block;
-        }
+      grid-area: main;
     }
-    
- 
-    /*final de main*/
-    /*inicio de footer */
-    footer{
-        margin: none;
+
+    footer {
+      grid-area: footer;
+    }
+  }
+
+  /*inicio de header*/
+  header {
+    z-index: 2;
+    background-color: $color-secundario;
+    .titulo {
+      text-align: center;
+      font-size: 2.1vh;
+      text-transform: uppercase;
+      color: black;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      margin: 20px;
+      padding: 2rem;
+
+      li {
+        font-size: 2.9vh;
+        display: flex;
         text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 10px;
+        padding: 10px;
+
+        a {
+          &:hover {
+            background-color: #b8994e;
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .logo {
+        display: inline-block;
+        height: 75px;
+        width: 175px;
+      }
     }
-    /*final de footer*/
+  }
+  /*final de header*/
+  /*inicio de main*/
+
+  main {
+    h2 {
+      @include text;
+      font-size: 36px;
+      margin-bottom: 100px;
+    }
+
+    .containerVelas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+
+      .containerVelas1,
+      .containerVelas2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .parrafoIndex {
+      margin: 40px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  /*final de main*/
+  /*inicio de footer */
+  footer {
+    margin: none;
+    text-align: center;
+  }
+  /*final de footer*/
 }
 /*css velas*/
 //css velas
 .bodyVelas {
-    background-image: linear-gradient(to left, #F9DC88, #D1BD8F);
-    font-family: 'Roboto', sans-serif;
-    color: $color-letra;
-    /*inicio de header*/
-    .headerVelas {
-        background-color: #D1BD8F;
-        .menuVelas {
-            background-color: #D1BD8F;
-            text-align: start;
-            margin: 10px;
-            padding: 2rem;
-            
-            li {
-                font-size: 2.9vh;
-                display: inline-block;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 10px;
-                padding: 10px;
+  background-image: linear-gradient(to left, #f9dc88, #d1bd8f);
+  font-family: "Roboto", sans-serif;
+  color: $color-letra;
+  /*inicio de header*/
+  .headerVelas {
+    background-color: #d1bd8f;
+    .menuVelas {
+      background-color: #d1bd8f;
+      text-align: start;
+      margin: 10px;
+      padding: 2rem;
 
-                a {
-                    color: black;
-                    text-decoration: none;
-                }
-            }
+      li {
+        font-size: 2.9vh;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 10px;
 
-            .logoVelas {
-                display: inline-block;
-                height: 75px;
-                width: 175px;
-            }
+        a {
+          color: black;
+          text-decoration: none;
         }
-    }
-    /*final de header*/
+      }
 
-    .velasTitulo {
-        @include text;
-        font-size: 5vh;
+      .logoVelas {
+        display: inline-block;
+        height: 75px;
+        width: 175px;
+      }
     }
-    .estilosCard{
-        margin: 2rem;
-        background-color: brown;
+  }
+  /*final de header*/
+
+  .velasTitulo {
+    @include text;
+    font-size: 5vh;
+  }
+  .estilosCard {
+    margin: 2rem;
+    background-color: brown;
+  }
+  .btnEstilos {
+    background-color: $color-secundario;
+    box-shadow: 2px 3px black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+
+    &:hover {
+      transform: scale(1.1);
     }
-    .btnEstilos {
-        background-color: $color-secundario;
-        box-shadow: 2px 3px black;
-        font-size: 1.2rem;
-        font-weight: bold;
-        letter-spacing: 0.1rem;
-       
-        &:hover {
-            transform: scale(1.1);
+  }
+  .estilosP {
+    font-size: 1.8rem;
+  }
+  .containerFluid {
+    .row {
+      .card {
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
+      }
     }
-    .estilosP {
-        font-size: 1.8rem;
-    }
-    .containerFluid{
-        .row{
-            .card{
-                .card-body{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-            }
-        }
-    }
-    
+  }
 }
 /*css productos*/
 //css productos
 .containerProductos {
-    .perfuminas {
-        text-align: center;
-        font-size: 5vh;
-        text-transform: uppercase;
-        margin: 50px;
-        padding: 50px;
-    }
-
-    .perfuminasTexto {
-        margin: 50px;
-        text-align: center;
-    }
-
-    .perfuminasTexto2 {
-        @extend .perfuminasTexto;
-    }
-}
-
-.fotos {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 100px;
-
-    .esencias1 {
-        @include size (auto, auto)
-    }
-
-    .esencias2 {
-        @include size (auto, auto)
-    }
-
-    .difusor1 {
-        @include size (auto, auto)
-    }
-
-    .difusor2 {
-        @include size (auto, auto)
-    }
-}
-
-.difusor {
+  .perfuminas {
     text-align: center;
     font-size: 5vh;
     text-transform: uppercase;
-    margin: 70px;
+    margin: 50px;
+    padding: 50px;
+  }
 
-    .difusorTexto {
-        margin: 50px;
-        text-align: center;
-    }
+  .perfuminasTexto {
+    margin: 50px;
+    text-align: center;
+  }
 
-    .difusorTexto2 {
-        text-align: center;
-    }
+  .perfuminasTexto2 {
+    @extend .perfuminasTexto;
+  }
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 100px;
+
+  .esencias1 {
+    @include size(auto, auto);
+  }
+
+  .esencias2 {
+    @include size(auto, auto);
+  }
+
+  .difusor1 {
+    @include size(auto, auto);
+  }
+
+  .difusor2 {
+    @include size(auto, auto);
+  }
+}
+
+.difusor {
+  text-align: center;
+  font-size: 5vh;
+  text-transform: uppercase;
+  margin: 70px;
+
+  .difusorTexto {
+    margin: 50px;
+    text-align: center;
+  }
+
+  .difusorTexto2 {
+    text-align: center;
+  }
 }
 /*css sobre nosotros*/
 //css sobre nosotros
 .containerSobreNosotros {
-    text-align: center;
-    margin: 50px;
-    padding: 50px;
+  text-align: center;
+  margin: 50px;
+  padding: 50px;
 
-    .tituloSobreNosotros {
-        margin: 40px;
-        font-size: 5vh;
-        text-transform: uppercase;
-    }
-    .textoSobreNosotros{
-       margin: auto;
-    }
+  .tituloSobreNosotros {
+    margin: 40px;
+    font-size: 5vh;
+    text-transform: uppercase;
+  }
+  .textoSobreNosotros {
+    margin: auto;
+  }
 }
 /*css contactanos*/
 //css contactanos
-.bodyContacto{
-    position: relative;
-    padding-bottom: 3em;
-    min-height: 100vh;
-    .headerContacto{
-        margin:0;
-        .menu{
-            margin: 10px;
-            padding: 2rem;
-        }
+.bodyContacto {
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+  .headerContacto {
+    margin: 0;
+    .menu {
+      margin: 10px;
+      padding: 2rem;
     }
-    /*inicio de main */
-    .mainContactanos {
-        .contactosParrafos{
-            margin: 20px;
-            padding: 20px;
-            font-size: 20px;
-        }
+  }
+  /*inicio de main */
+  .mainContactanos {
+    .contactosParrafos {
+      margin: 20px;
+      padding: 20px;
+      font-size: 20px;
     }
-    /*final de main*/
+  }
+  /*final de main*/
 
-    .formulario {
-        border: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        padding: 50px;
-        margin: 50px;
-    }
-
+  .formulario {
+    border: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    padding: 50px;
+    margin: 50px;
+  }
 }
 /*inicio de footer*/
 .footer1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 /*final de footer*/
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-pre{
+pre {
+  text-align: center;
+}
+
+@media only screen and (max-width: 875px) {
+  body {
+    header {
+      .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .logo {
+          margin: auto;
+          height: auto;
+          width: auto;
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+    main {
+      .containerVelas {
+        flex-direction: column;
+      }
+    }
+  }
+  //css velas
+  .bodyVelas {
     text-align: center;
-}
-
-
-@media only screen and (max-width:480px){
-    body{
-        align-items: center;
-        header{
-            align-items: center;
-        }
-        .titulo{
-            text-align: center;
-        }
-        .menu{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
-            .logo{
-                margin:auto;
-                align-items: center;
-            }
-            li{
-                display: inline-block;
-                justify-content: center;
-            }
-        }
-    }
-    main{
-        .grid{
-            display: inline-block;
-            justify-content: center;
-            align-items: center;
-            .item{
-                display: grid;
-                text-align: center;
-                grid-column: none;
-                align-items: center;
-            }
-            .containerVelas{
-                display: grid;
-                justify-content: center;
-                align-items: center;
-            
-                .imgVelas{
-                    display: grid;
-                    margin: 20px;
-                    height: 300px;
-                    width: 300px;
-                }
-                .imgVelas2{
-                    display: none;
-                }
-                .subtituloVelas{
-                    display: grid;
-                    margin: 20px;
-                    grid-column: none;
-                    padding: none;
-                }
-                .subtituloDifusor{
-                    display: none;
-                }
-            }
-        }
-    }
-
-    //css velas
-    .bodyVelas{
-        text-align: center;
-        .headerVelas{
-            text-align: center;
-            .titulo{
-                color: black;
-            }
-            .logoVelas{
-                align-items: center; 
-                margin: auto;
-            }
-            .home{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .liVelas{
-              margin: 50px;
-              padding: 10px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center; 
-              align-items: center;
-              text-align: center;
-            }
-        }
-    } 
-
-    
-    //css productos
-    .fotos{
+    .headerVelas {
+      text-align: center;
+      .menuVelas {
         display: flex;
         flex-direction: column;
-       margin: 60px;
-       .esencias1{
-           margin: 10px;
-        }
-        .esencias2{
-            margin: 10px;
-        }
-        .difusor1{
-            margin: 10px;
-        }
-        .difusor2{
-            margin: 30px;
-        }
-    }
-    //css sobre nosotros
-    .containerSobreNosotros{
-        
-        .textoSobreNosotros{
-            display: grid;
-            justify-content: center;
-            justify-items: center;
-            text-align: center;
-            align-items: center;;
-        }
-    }
-    
-    
-    .footer1{
-        position: relative;
-    }
-    
-    //css contactanos
-    .formulario{
-        font-size: small;
-    }
-}
-
-@media only screen and (max-width:875px){
-    body{
-        header{
-            .menu{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                .logo{
-                    margin: auto;
-                    height: auto;
-                    width: auto;
-                }
-                li{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-            }
-        }
-        main{
-            .grid{
-                display: inline-block;
-                justify-content: center;
-                align-items: center;
-                .item{
-                    display: grid;
-                    text-align: center;
-                    grid-column: none;
-                    align-items: center;
-                }
-                .containerVelas{
-                    display: grid;
-                    justify-content: center;
-                    align-items: center;
-                
-                    .imgVelas{
-                        display: grid;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: auto;
-                        height: 400px;
-                        width: 400px;
-                        padding: auto;
-                    }
-                    .imgVelas2{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        margin: auto;
-                    }
-                    .subtituloVelas{
-                        display: grid;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: 40px;
-                        grid-column: none;
-                        padding: none;
-                    }
-                    .subtituloDifusor{
-                        display: grid;
-                        justify-content: center;
-                        margin: auto;
-                        grid-column: none;
-                        padding: none;
-                    }
-                }
-        }   }
-    }
-    //css velas
-    .bodyVelas{
-        text-align: center;
-        .headerVelas{
-            text-align: center;
-            .menuVelas{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            .titulo{
-                color: black;
-            }
-            .logoVelas{
-                align-items: center; 
-                margin: auto;
-            }
-            .home{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .liVelas{
-              margin: 50px;
-              padding: 10px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center; 
-              align-items: center;
-              text-align: center;
-            }
-        }
-    } 
-    img{
-     width: 150px;
-     height: auto;
-    }
-    //css productos
-    .fotos{
+        justify-content: center;
+      }
+      .titulo {
+        color: black;
+      }
+      .logoVelas {
+        align-items: center;
+        margin: auto;
+      }
+      .home {
         display: flex;
         flex-direction: column;
-        margin: 60px;
+        justify-content: center;
         align-items: center;
-       .esencias1{
-           margin: 80px;
-           height: 300px;
-           width: 300px;
-        }
-        .esencias2{
-            margin: 80px;
-            height: 300px;
-           width: 300px;
-        }
-        .difusor1{
-            margin: 120px;
-            height: 300px;
-           width: 300px;
-        }
-        .difusor2{
-            margin: 10px;
-            height: 300px;
-           width: 300px;
-        }
+      }
+      .liVelas {
+        margin: 50px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
     }
-    // css productos
+  }
 
-    .footer1{
-        position: relative;
+  //css productos
+  .fotos {
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    align-items: center;
+    .esencias1 {
+      margin: 80px;
+      height: 300px;
+      width: 300px;
     }
+    .esencias2 {
+      margin: 80px;
+      height: 300px;
+      width: 300px;
+    }
+    .difusor1 {
+      margin: 120px;
+      height: 300px;
+      width: 300px;
+    }
+    .difusor2 {
+      margin: 10px;
+      height: 300px;
+      width: 300px;
+    }
+  }
+  // css productos
 
-   
+  .footer1 {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    header {
+      text-align: center;
+      .titulo {
+        text-align: center;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .log {
+          margin: auto;
+          align-items: center;
+        }
+        li {
+          display: inline-block;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  //css velas
+  .bodyVelas {
+    text-align: center;
+    .headerVelas {
+      text-align: center;
+      .titulo {
+        color: black;
+      }
+      .logoVelas {
+        align-items: center;
+        margin: auto;
+      }
+      .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .liVelas {
+        margin: 50px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  //css productos
+  .fotos {
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    .esencias1 {
+      margin: 10px;
+    }
+    .esencias2 {
+      margin: 10px;
+    }
+    .difusor1 {
+      margin: 10px;
+    }
+    .difusor2 {
+      margin: 30px;
+    }
+  }
+  //css sobre nosotros
+  .containerSobreNosotros {
+    .textoSobreNosotros {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .footer1 {
+    position: relative;
+  }
+
+  //css contactanos
+  .formulario {
+    font-size: small;
+  }
 }
