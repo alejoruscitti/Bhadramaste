@@ -328,15 +328,15 @@ pre {
   .fotos {
     display: flex;
     flex-direction: column;
-    margin: 60px; }
+    margin: 80px; }
     .fotos .esencias1 {
-      margin: 10px; }
+      margin: 100px; }
     .fotos .esencias2 {
-      margin: 10px; }
+      margin: 100px; }
     .fotos .difusor1 {
-      margin: 10px; }
+      margin: 100px; }
     .fotos .difusor2 {
-      margin: 30px; }
+      margin: 100px; }
   .containerSobreNosotros .textoSobreNosotros {
     display: grid;
     justify-content: center;
@@ -344,6 +344,7 @@ pre {
     text-align: center;
     align-items: center; }
   .footer1 {
-    position: relative; }
+    position: relative;
+    margin: auto; }
   .formulario {
     font-size: small; } }
